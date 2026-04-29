@@ -129,10 +129,10 @@ COLORS = {
 # LOAD DATA
 @st.cache_data
 def load_data():
-    day_df = pd.read_csv("main_data_day.csv")
+    day_df = pd.read_csv("dashboard/main_data_day.csv")
     day_df['dteday'] = pd.to_datetime(day_df['dteday'])
     
-    hour_df = pd.read_csv("main_data_hour.csv")
+    hour_df = pd.read_csv("dashboard/main_data_hour.csv")
     hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
     
     return day_df, hour_df
